@@ -1,0 +1,9 @@
+
+### 订单服务方测试服务降级的超时与运行时异常情况
+
+#异常与超时都会触发指定的fallbackMethod回退方法
+GET http://localhost:8001/payment/hystrix/timeout/3
+
+
+### 测试服务方已挂掉,消费方添加服务降级
+GET http://localhost:8000/consumer/payment/hystrix/ok/2
